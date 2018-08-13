@@ -1,3 +1,13 @@
 #map {
     height: 600px;
 }
+
+body{
+    background-image: url("images/map-of-world-frame.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.maps_pos {
+}

@@ -3,13 +3,14 @@ let marker,
     mapboxAttribution = 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>';
 
 var grayscale = L.tileLayer(mapboxUrl, {id: 'mapbox.emerald', attribution: mapboxAttribution}),
-    streets   = L.tileLayer(mapboxUrl, {id: 'mapbox.streets-satellite', attribution: mapboxAttribution});
+    streets = L.tileLayer(mapboxUrl, {id: 'mapbox.streets-satellite', attribution: mapboxAttribution});
 
 var mymap = L.map('map', {
     center: [48.573405, 7.752111],
     zoom: 10,
-    layers: [grayscale],
     minZoom: 2,
+    layers: [grayscale],
+    fullscreenControl: true,
 });
 
 var baseMaps = {

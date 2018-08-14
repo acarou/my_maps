@@ -21,15 +21,13 @@ var baseMaps = {
 L.control.layers(baseMaps).addTo(mymap);
 
 
-$(document).ready(function () {
-    mymap.on('click',function (e) {
-        console.log(e);
-        if (marker) {
-            marker.remove();
-        }
-            marker = L.marker(e.latlng).addTo(mymap);
-    });
-
+mymap.on('click', function (e) {
+    console.log(e);
+    if (marker) {
+        marker.remove();
+    }
+    marker = L.marker(e.latlng).addTo(mymap);
     //mymap.locate({setView: true, maxZoom: 16});
-
 });
+
+L.control.locate().addTo(mymap);
